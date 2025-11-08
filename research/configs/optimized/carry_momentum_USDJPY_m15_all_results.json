@@ -1,0 +1,4966 @@
+{
+  "optimization_metric": "recovery_factor",
+  "best_score": 2.662803078697867,
+  "best_params": {
+    "atr_multiplier": 3.4359690563514174,
+    "min_adx": 16,
+    "min_pos_di_advantage": 3.9291579707320747,
+    "trend_confirmation_bars": 2,
+    "risk_reward_ratio": 4.0,
+    "enable_short_trades": false
+  },
+  "total_combinations": 450,
+  "optimized_at": "2025-11-08T19:24:17.020170",
+  "all_results": [
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": -0.03645456286285423
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.11140486803274088
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.14402930343526005
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.594457180045658,
+        "min_adx": 22,
+        "min_pos_di_advantage": 1.6418291382715906,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.201201574221031,
+        "enable_short_trades": false
+      },
+      "score": -0.25057545832762224
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.833554214763236,
+        "min_adx": 18,
+        "min_pos_di_advantage": 3.8277173259279054,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 1.837279522389542,
+        "enable_short_trades": false
+      },
+      "score": -0.3949554028227305
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.9784558454161587,
+        "min_adx": 22,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": -0.3990772942721268
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.652236576076258,
+        "min_adx": 26,
+        "min_pos_di_advantage": 0.5146176497952977,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 1.5795322620109258,
+        "enable_short_trades": false
+      },
+      "score": -0.42437809384375
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1108148913415414,
+        "min_adx": 26,
+        "min_pos_di_advantage": 0.6584705790886137,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 2.98973438505922,
+        "enable_short_trades": false
+      },
+      "score": -0.43771580494127393
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.9144730017838736,
+        "min_adx": 26,
+        "min_pos_di_advantage": 2.3860808165960634,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": -0.49023676806543826
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.7322535876492964,
+        "min_adx": 20,
+        "min_pos_di_advantage": 0.7963623282736595,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.370523824774976,
+        "enable_short_trades": false
+      },
+      "score": -0.5366332469451761
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 0.7891407405313327,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 2.0081729846484913,
+        "enable_short_trades": false
+      },
+      "score": -0.6739915123088099
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.1658935493785565,
+        "min_adx": 18,
+        "min_pos_di_advantage": 1.278418007943979,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.3032167418538405,
+        "enable_short_trades": false
+      },
+      "score": -0.9260950329429983
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.013785291854357,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.599502655905233,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 2.7688690400989358,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999877
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.272692977799029,
+        "min_adx": 22,
+        "min_pos_di_advantage": 1.7616144004884915,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 1.7157088893103083,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999902
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.381759190235238,
+        "min_adx": 20,
+        "min_pos_di_advantage": 1.4337040496531834,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.950123925049482,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999918
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.416850531504091,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.6514712577578026,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 2.411964369537454,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999933
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.7342930921688513,
+        "min_adx": 24,
+        "min_pos_di_advantage": 1.0467917679333638,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.260601883779759,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999961
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.86210131394598,
+        "min_adx": 24,
+        "min_pos_di_advantage": 0.6555963415276705,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 2.257589244726651,
+        "enable_short_trades": true
+      },
+      "score": -1.000000000000005
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.530071662819718,
+        "min_adx": 24,
+        "min_pos_di_advantage": 3.213197562799447,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.7323894673859894,
+        "enable_short_trades": true
+      },
+      "score": -1.000000000000008
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8293346113499254,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.599870853633671,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 2.5341906278508457,
+        "enable_short_trades": true
+      },
+      "score": -1.000000000000011
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.6935048895609057,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.8951656193913076,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 1.96663687698054,
+        "enable_short_trades": false
+      },
+      "score": -1.0000000000000115
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.827808554590407,
+        "min_adx": 16,
+        "min_pos_di_advantage": 2.268118792840813,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 2.8552582141116303,
+        "enable_short_trades": true
+      },
+      "score": -1.0000000000000142
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.1162049069977416,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.842983377206148,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.5588527489796586,
+        "enable_short_trades": true
+      },
+      "score": -1.000000000000016
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.6795513226162884,
+        "min_adx": 20,
+        "min_pos_di_advantage": 0.8146711239029581,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.419852559064431,
+        "enable_short_trades": true
+      },
+      "score": -1.0000000000000167
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.5757656767274852,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.829325999413391,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 1.9371962314141176,
+        "enable_short_trades": true
+      },
+      "score": -1.0000000000000195
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.989898164755718,
+        "min_adx": 18,
+        "min_pos_di_advantage": 1.9246676844521293,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 1.7414472204591815,
+        "enable_short_trades": true
+      },
+      "score": -1.0000000000000284
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.3026401120876425,
+        "min_adx": 18,
+        "min_pos_di_advantage": 2.4034398150996044,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 3.1876040088718307,
+        "enable_short_trades": true
+      },
+      "score": -1.0000000000000302
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0362469635060902,
+        "min_adx": 18,
+        "min_pos_di_advantage": 0.735669279660608,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 1.7675463627098384,
+        "enable_short_trades": false
+      },
+      "score": -1.0000000000000437
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.5158621466096291,
+        "min_adx": 26,
+        "min_pos_di_advantage": 2.8932897253841396,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.8243505527569615,
+        "enable_short_trades": true
+      },
+      "score": -1.000000000000061
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": -0.03645456286285423
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.11140486803274088
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.13454922993197838
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.14211386550969235
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.14402930343526005
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.14402930343526005
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1108148913415414,
+        "min_adx": 18,
+        "min_pos_di_advantage": 3.8277173259279054,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 1.837279522389542,
+        "enable_short_trades": false
+      },
+      "score": -0.1511214631406878
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.652236576076258,
+        "min_adx": 26,
+        "min_pos_di_advantage": 2.3860808165960634,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": -0.18327336477967376
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.7322535876492964,
+        "min_adx": 20,
+        "min_pos_di_advantage": 1.278418007943979,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.3032167418538405,
+        "enable_short_trades": false
+      },
+      "score": -0.20020171348927582
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.594457180045658,
+        "min_adx": 22,
+        "min_pos_di_advantage": 1.6418291382715906,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.201201574221031,
+        "enable_short_trades": false
+      },
+      "score": -0.25057545832762224
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.594457180045658,
+        "min_adx": 22,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": -0.27755989838378486
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.594457180045658,
+        "min_adx": 22,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": -0.30983808259719
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.652236576076258,
+        "min_adx": 20,
+        "min_pos_di_advantage": 0.5146176497952977,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 1.5,
+        "enable_short_trades": false
+      },
+      "score": -0.32737979461685973
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.9144730017838736,
+        "min_adx": 26,
+        "min_pos_di_advantage": 0.5146176497952977,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 1.5795322620109258,
+        "enable_short_trades": false
+      },
+      "score": -0.331795500079928
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.6418291382715906,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.201201574221031,
+        "enable_short_trades": false
+      },
+      "score": -0.33263588150298035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.8277173259279054,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 1.837279522389542,
+        "enable_short_trades": false
+      },
+      "score": -0.43402930500724807
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.9784558454161587,
+        "min_adx": 22,
+        "min_pos_di_advantage": 1.6418291382715906,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.201201574221031,
+        "enable_short_trades": false
+      },
+      "score": -0.4477693879830183
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.9144730017838736,
+        "min_adx": 26,
+        "min_pos_di_advantage": 2.3860808165960634,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": -0.49023676806543826
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.833554214763236,
+        "min_adx": 26,
+        "min_pos_di_advantage": 0.6584705790886137,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 2.98973438505922,
+        "enable_short_trades": false
+      },
+      "score": -0.5602493450808066
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.833554214763236,
+        "min_adx": 18,
+        "min_pos_di_advantage": 0.7891407405313327,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 2.0081729846484913,
+        "enable_short_trades": false
+      },
+      "score": -0.6697069191589538
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.1658935493785565,
+        "min_adx": 18,
+        "min_pos_di_advantage": 0.7963623282736595,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.370523824774976,
+        "enable_short_trades": false
+      },
+      "score": -0.9442542307833067
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8274551009424873,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.646921680865234,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.9688855213372025,
+        "enable_short_trades": false
+      },
+      "score": -0.9999999999999531
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.9977717611972583,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.9043299449936018,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999873
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.013785291854357,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.599502655905233,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 2.7688690400989358,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999877
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.272692977799029,
+        "min_adx": 22,
+        "min_pos_di_advantage": 1.7616144004884915,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 1.7157088893103083,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999902
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.381759190235238,
+        "min_adx": 20,
+        "min_pos_di_advantage": 1.4337040496531834,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.950123925049482,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999918
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8293346113499254,
+        "min_adx": 26,
+        "min_pos_di_advantage": 2.268118792840813,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 2.8552582141116303,
+        "enable_short_trades": true
+      },
+      "score": -1.0000000000000064
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.827808554590407,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.599870853633671,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 2.5341906278508457,
+        "enable_short_trades": true
+      },
+      "score": -1.0000000000000124
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": 0.3648750011491111
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.20922643843469685
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.6418291382715906,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.201201574221031,
+        "enable_short_trades": false
+      },
+      "score": -0.028139168318885244
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": -0.03645456286285423
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": -0.03645456286285423
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": -0.03645456286285423
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.594457180045658,
+        "min_adx": 22,
+        "min_pos_di_advantage": 3.8277173259279054,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 1.837279522389542,
+        "enable_short_trades": false
+      },
+      "score": -0.05942478018360995
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.10199333420620815
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.11140486803274088
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.13454922993197838
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.13454922993197838
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.14211386550969235
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.14402930343526005
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.14402930343526005
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.594457180045658,
+        "min_adx": 22,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.201201574221031,
+        "enable_short_trades": false
+      },
+      "score": -0.25057545832762224
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.7322535876492964,
+        "min_adx": 20,
+        "min_pos_di_advantage": 1.278418007943979,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": -0.25605845186700954
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.9784558454161587,
+        "min_adx": 22,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.31528303351637804
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.9144730017838736,
+        "min_adx": 26,
+        "min_pos_di_advantage": 0.5146176497952977,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 1.5795322620109258,
+        "enable_short_trades": false
+      },
+      "score": -0.331795500079928
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.7173179279378616,
+        "min_adx": 24,
+        "min_pos_di_advantage": 1.6553645809313107,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.37898910979819433
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.8659447181995126,
+        "min_adx": 22,
+        "min_pos_di_advantage": 1.6418291382715906,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": -0.3932612645221987
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.3032167418538405,
+        "enable_short_trades": false
+      },
+      "score": -0.49507735162960015
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1314693149288297,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": -0.5273655998401006
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.652236576076258,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.9279985884687036,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.3032167418538405,
+        "enable_short_trades": false
+      },
+      "score": -0.5635813480945507
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.511567075753056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": true
+      },
+      "score": -0.9495543653175351
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 18,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999601
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.9144730017838736,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.7614783221192636,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": true
+      },
+      "score": -1.0000000000000797
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.1558730606041
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 0.7976074851519088
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 0.6698515772473962
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": 0.48316372907884975
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": 0.3648750011491111
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": 0.25128022250351095
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.20922643843469685
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.20922643843469685
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.20922643843469685
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": 0.05173705135997608
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 0.023768060054065454
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.020467141672765247
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": -0.03645456286285423
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.10199333420620815
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.10199333420620815
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.11133676982616707
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.13454922993197838
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.13454922993197838
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.13454922993197838
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.3982228747882237,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.710311692988633,
+        "enable_short_trades": false
+      },
+      "score": -0.2453549653311445
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.100767162333038,
+        "enable_short_trades": false
+      },
+      "score": -0.4198884874723468
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.7173179279378616,
+        "min_adx": 24,
+        "min_pos_di_advantage": 1.6553645809313107,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": -0.4212715031941602
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": -0.5273455898120415
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.3670023296485687,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999771
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.1558730606041
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.092423202376307
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 0.9895203200259488
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 0.879654727600491
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 0.8573822983996179
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 0.8384343977052181
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 0.7976074851519088
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 0.7976074851519088
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.907092390081145,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.2953827162822185,
+        "enable_short_trades": false
+      },
+      "score": 0.7430700504595986
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 0.6698515772473962
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": 0.48316372907884975
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": 0.3648750011491111
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 0.32757697906188893
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": 0.25128022250351095
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.1538236670174924,
+        "enable_short_trades": false
+      },
+      "score": 0.25128022250351095
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.43467422594459,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 3.167512046226325,
+        "enable_short_trades": false
+      },
+      "score": 0.2188394284568735
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.20922643843469685
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.20922643843469685
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": 0.18170173451713853
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.011258288993668049
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": false
+      },
+      "score": 0.010866099121625753
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.7170287327343106,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": -0.12438470753719591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.13181302069490194
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.991683111435733,
+        "min_adx": 26,
+        "min_pos_di_advantage": 2.93202240302962,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": -0.6826170953590269
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 2.491760825002297,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999631
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.1558730606041
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.1558730606041
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.932222081368107,
+        "enable_short_trades": false
+      },
+      "score": 1.120159748339499
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.092423202376307
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.072534062735405
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 1.0401394688130408
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 0.8384343977052181
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 0.7811909036630328
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 0.7811909036630328
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 0.6698515772473962
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 0.6698515772473962
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 0.5933059333769253
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 0.5816230725729902
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 0.5035075742995007
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 0.4918103717643062
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.1312427632545026,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": 0.48316372907884975
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 18,
+        "min_pos_di_advantage": 2.946752582354466,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 0.44895710210601586
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 0.44758916142872923
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 0.4401515748060669
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": 0.3648750011491111
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.8641960163205664,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 2.4349730052348173,
+        "enable_short_trades": false
+      },
+      "score": 0.3648750011491111
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.021650178276102,
+        "min_adx": 22,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.5178046623128676,
+        "enable_short_trades": false
+      },
+      "score": -0.4465777340650398
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.4202116063067944
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.4202116063067944
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.1683841559046155
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.1558730606041
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.1558730606041
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.1558730606041
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.1558730606041
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.092423202376307
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.072534062735405
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.3722272102920594,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.978490211255254,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.0673836859152392
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 1.0401394688130408
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.9295766489058637,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 0.926129474113693
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 0.7904723934159378
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 26,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 0.7811909036630328
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 0.7446214234775858
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 0.5973938209879764
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 0.5973938209879764
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.389823853413444,
+        "enable_short_trades": false
+      },
+      "score": 0.5933059333769253
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.2364277297803334,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 0.5430694847578791
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 0.5035075742995007
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.4202116063067944
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.4202116063067944
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.4357819671079275,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.312388001840138
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.262696226218884,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.873343159838694,
+        "enable_short_trades": false
+      },
+      "score": 1.2305118792500318
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.1558730606041
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.7547591806941636,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.1558730606041
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.143623422659905
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.072534062735405
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.0693131628824035
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.9295766489058637,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 0.926129474113693
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 24,
+        "min_pos_di_advantage": 2.9223735048526023,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 0.5676879143289829
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.361682685589816,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.466407035321141,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 0.5325107715247229
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.3618633301755976,
+        "min_adx": 18,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 0.003256254054517316
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.8886017104629014,
+        "min_adx": 22,
+        "min_pos_di_advantage": 2.632945479792584,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.04179883545893206
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.777138515484675,
+        "min_adx": 26,
+        "min_pos_di_advantage": 4.0,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.2907844500564219
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999666
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7479329699701958
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.922983536400916,
+        "enable_short_trades": false
+      },
+      "score": 1.7023828553029112
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.7617703238901474,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.4202116063067944
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.4202116063067944
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.008174416139525,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.4202116063067944
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.4357819671079275,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.223667090878239,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.2940036544683153
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.0942367022061845
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.4549910879457126,
+        "enable_short_trades": false
+      },
+      "score": 1.092423202376307
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.072534062735405
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.0238781004676445
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.7253751280326015,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7479329699701958
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7479329699701958
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7479329699701958
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.922983536400916,
+        "enable_short_trades": false
+      },
+      "score": 1.7023828553029112
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.7617703238901474,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.4469193671040812
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.298502240303646,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.6848304565989047,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.4202116063067944
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.0238781004676445
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.418975521852797,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": -0.020467141672765247
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.922983536400916,
+        "enable_short_trades": false
+      },
+      "score": -0.035929748422347633
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": true
+      },
+      "score": -0.9809484659127359
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 18,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": true
+      },
+      "score": -0.9999999999999484
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.7253751280326015,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.7253751280326015,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7669924329946052
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7481213026589342
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7479329699701958
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7479329699701958
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7479329699701958
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 16,
+        "min_pos_di_advantage": 1.8538868533629926,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.418911673725688,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.365115475077467
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 26,
+        "min_pos_di_advantage": 3.1586693591035937,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.773051412192974,
+        "enable_short_trades": false
+      },
+      "score": 1.1534556742879807
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.442225913566651,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7882803659913706
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.7253751280326015,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.7253751280326015,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.7253751280326015,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.7253751280326015,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.987091455057766,
+        "enable_short_trades": false
+      },
+      "score": 1.7563199179050764
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7481213026589342
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7481213026589342
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7481213026589342
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.971560654402249,
+        "enable_short_trades": false
+      },
+      "score": 1.7432531114204932
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 20,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 5,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 0.14930503546601165
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": true
+      },
+      "score": -0.8888359375480385
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 18,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": true
+      },
+      "score": -1.000000000000057
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.631931347140567
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.442225913566651,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7882803659913706
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.442225913566651,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7882803659913706
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.442225913566651,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7882803659913706
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.442225913566651,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.769251536817872
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.7253751280326015,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.9780811040320545,
+        "enable_short_trades": false
+      },
+      "score": 1.7487390780100394
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7481213026589342
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.203827683064141,
+        "min_adx": 24,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 0.5634281242422684
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": true
+      },
+      "score": -0.9783509088071903
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 14,
+        "min_pos_di_advantage": 2.3870315903747974,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": true
+      },
+      "score": -0.9785426952676044
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.631931347140567
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.631931347140567
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.631931347140567
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.442225913566651,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7882803659913706
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.442225913566651,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.4561358715447095,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7882803659913706
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.97734683542256,
+        "enable_short_trades": false
+      },
+      "score": 1.7715991382844591
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 1.7253751280326015,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7671804950574788
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.270281276080038,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 3.964325681744023,
+        "enable_short_trades": false
+      },
+      "score": 1.562764028180834
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4690250662123026,
+        "min_adx": 18,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.0339799566737693
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 3,
+        "risk_reward_ratio": 3.6162693896412543,
+        "enable_short_trades": false
+      },
+      "score": 0.6047209881304346
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.662803078697867
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.631931347140567
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.631931347140567
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.631931347140567
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.631931347140567
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.631931347140567
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.631931347140567
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.499481948722834,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.631931347140567
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.5,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 2.6316837095719
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 14,
+        "min_pos_di_advantage": 3.024238395382056,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.790624594057012
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.442225913566651,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.4561358715447095,
+        "trend_confirmation_bars": 2,
+        "risk_reward_ratio": 4.0,
+        "enable_short_trades": false
+      },
+      "score": 1.7882803659913706
+    },
+    {
+      "params": {
+        "atr_multiplier": 3.4359690563514174,
+        "min_adx": 16,
+        "min_pos_di_advantage": 3.9291579707320747,
+        "trend_confirmation_bars": 4,
+        "risk_reward_ratio": 3.5436553731544667,
+        "enable_short_trades": false
+      },
+      "score": 1.0627584310913125
+    }
+  ]
+}

@@ -157,7 +157,7 @@ def optimize_carry_momentum_fast(
 
 
 def optimize_carry_momentum_genetic(
-    runner: FullBacktestRunner, instrument: str, period: str, n_jobs: int = 12
+    runner: FullBacktestRunner, instrument: str, period: str, n_jobs: int = 12, fast_mode: bool = False
 ) -> OptimizationResult:
     """Генетическая оптимизация параметров Carry Momentum стратегии."""
     
@@ -185,7 +185,23 @@ def optimize_carry_momentum_genetic(
         "enable_short_trades": [True, False],  # Добавлено: оптимизация включения/выключения шортовых сделок
     }
     
-    optimizer = GeneticOptimizer(runner)
+    # Параметры оптимизации в зависимости от режима
+    if fast_mode:
+        n_generations = 15
+        population_size = 30
+        log.info("Используется быстрый режим: %s поколений, популяция %s", n_generations, population_size)
+    else:
+        n_generations = 20
+        population_size = 50
+    
+    optimizer = GeneticOptimizer(
+        runner,
+        n_generations=n_generations,
+        population_size=population_size,
+        early_stopping_patience=5,  # Останавливаем если нет улучшения 5 поколений
+        use_fast_evaluation=True,  # Используем быструю оценку для начальных поколений
+        fast_evaluation_months=6,  # Используем последние 6 месяцев для быстрой оценки
+    )
     
     # Путь для промежуточного сохранения результатов
     from pathlib import Path
@@ -498,6 +514,11 @@ def main() -> None:
         action="store_true",
         help="Использовать генетический алгоритм вместо grid search (только для carry_momentum).",
     )
+    parser.add_argument(
+        "--fast-mode",
+        action="store_true",
+        help="Использовать быстрый режим генетической оптимизации (меньше поколений и популяция, только с --use-genetic).",
+    )
     args = parser.parse_args()
 
     logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
@@ -514,7 +535,7 @@ def main() -> None:
         result = optimize_mean_reversion(runner, args.instrument, args.period, args.n_jobs, args.early_stopping_threshold)
     elif args.strategy == "carry_momentum":
         if args.use_genetic:
-            result = optimize_carry_momentum_genetic(runner, args.instrument, args.period, args.n_jobs)
+            result = optimize_carry_momentum_genetic(runner, args.instrument, args.period, args.n_jobs, args.fast_mode)
         else:
             result = optimize_carry_momentum(runner, args.instrument, args.period, args.n_jobs, args.early_stopping_threshold)
     elif args.strategy == "momentum_breakout":

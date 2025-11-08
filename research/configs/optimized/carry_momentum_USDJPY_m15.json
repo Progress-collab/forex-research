@@ -1,9 +1,13 @@
 {
-  "optimization_metric": "profit_factor",
-  "best_score": 0.9137688137345412,
+  "optimization_metric": "recovery_factor",
+  "best_score": 2.662803078697867,
   "best_params": {
-    "atr_multiplier": 2.5,
-    "min_adx": 25
+    "atr_multiplier": 3.4359690563514174,
+    "min_adx": 16,
+    "min_pos_di_advantage": 3.9291579707320747,
+    "trend_confirmation_bars": 2,
+    "risk_reward_ratio": 4.0,
+    "enable_short_trades": false
   },
-  "optimized_at": "2025-11-08T15:09:00.088014"
+  "optimized_at": "2025-11-08T19:24:17.018667"
 }

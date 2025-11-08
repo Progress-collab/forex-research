@@ -132,6 +132,9 @@ class GeneticOptimizer:
         crossover_prob: float = 0.7,
         tournament_size: int = 3,
         elite_size: int = 5,
+        early_stopping_patience: Optional[int] = None,  # Количество поколений без улучшения для раннего прекращения
+        use_fast_evaluation: bool = False,  # Использовать быструю оценку с подвыборкой данных
+        fast_evaluation_months: int = 6,  # Количество месяцев для быстрой оценки
     ):
         """
         Инициализация генетического оптимизатора.
@@ -160,6 +163,12 @@ class GeneticOptimizer:
         self.crossover_prob = crossover_prob
         self.tournament_size = tournament_size
         self.elite_size = elite_size
+        self.early_stopping_patience = early_stopping_patience
+        self.use_fast_evaluation = use_fast_evaluation
+        self.fast_evaluation_months = fast_evaluation_months
+        
+        # In-memory кэш для результатов текущей сессии
+        self._memory_cache: Dict[str, float] = {}
         
         # Инициализация DEAP
         creator.create("FitnessMax", base.Fitness, weights=(1.0,))
@@ -232,16 +241,21 @@ class GeneticOptimizer:
         """Оценивает фитнес индивида."""
         params = self._individual_to_params(individual)
         
-        # Проверяем кэш
+        # Проверяем in-memory кэш сначала (быстрее чем файловый)
         cache_key = _hash_params(params, instrument, period, optimization_metric)
-        cache_path = self.cache_dir / f"{cache_key}.json"
+        if cache_key in self._memory_cache:
+            return (self._memory_cache[cache_key],)
         
+        # Проверяем файловый кэш
+        cache_path = self.cache_dir / f"{cache_key}.json"
         if cache_path.exists():
             try:
                 with cache_path.open("r", encoding="utf-8") as fp:
                     cached_data = json.load(fp)
                     score = cached_data.get("score")
                     if score is not None:
+                        # Сохраняем в in-memory кэш для будущих обращений
+                        self._memory_cache[cache_key] = score
                         return (score,)
             except Exception:
                 pass
@@ -270,7 +284,8 @@ class GeneticOptimizer:
             else:
                 raise ValueError(f"Неизвестная метрика: {optimization_metric}")
             
-            # Сохраняем в кэш
+            # Сохраняем в оба кэша
+            self._memory_cache[cache_key] = score
             if cache_path:
                 try:
                     with cache_path.open("w", encoding="utf-8") as fp:
@@ -313,12 +328,22 @@ class GeneticOptimizer:
         Returns:
             OptimizationResult с лучшими параметрами и всеми результатами
         """
+        # Очищаем in-memory кэш перед началом оптимизации
+        self._memory_cache.clear()
+        
         # Определяем имя стратегии если не указано
         if strategy_factory_name is None:
             # Пробуем определить по типу стратегии из factory
             test_params = {k: v[0] if v else None for k, v in param_grid.items()}
             test_strategy = strategy_factory(test_params)
             strategy_factory_name = test_strategy.strategy_id
+        
+        # Вычисляем даты для быстрой оценки если нужно
+        fast_start_date = None
+        fast_end_date = end_date
+        if self.use_fast_evaluation and end_date:
+            from datetime import timedelta
+            fast_start_date = end_date - timedelta(days=self.fast_evaluation_months * 30)
         
         # Подготавливаем конфигурацию runner для сериализации
         runner_config = {
@@ -332,6 +357,7 @@ class GeneticOptimizer:
         # Преобразуем datetime в строки для сериализации
         start_date_str = start_date.isoformat() if start_date else None
         end_date_str = end_date.isoformat() if end_date else None
+        fast_start_date_str = fast_start_date.isoformat() if fast_start_date else None
         cache_dir_str = str(self.cache_dir)
         
         # Регистрируем функции для DEAP
@@ -384,8 +410,20 @@ class GeneticOptimizer:
                 all_results = []
                 best_score = float("-inf")
                 best_params = {}
+                no_improvement_count = 0  # Счетчик поколений без улучшения для early stopping
                 
                 for gen in range(self.n_generations):
+                    # Адаптивные параметры: уменьшаем мутацию со временем
+                    # Начинаем с высокой мутацией (0.3-0.4), заканчиваем низкой (0.1)
+                    current_mutation_prob = self.mutation_prob * (1.0 - gen / self.n_generations * 0.5) + 0.1
+                    # Адаптируем crossover_prob: увеличиваем в начале, уменьшаем в конце
+                    current_crossover_prob = self.crossover_prob * (1.0 + gen / self.n_generations * 0.2)
+                    current_crossover_prob = min(0.9, current_crossover_prob)  # Ограничиваем максимумом
+                    
+                    # Определяем использовать ли быструю оценку (только для начальных поколений)
+                    use_fast = self.use_fast_evaluation and gen < self.n_generations // 2
+                    eval_start_date_str = fast_start_date_str if use_fast else start_date_str
+                    
                     # Сортируем популяцию по фитнесу
                     population.sort(key=lambda x: x.fitness.values[0], reverse=True)
                     
@@ -395,8 +433,21 @@ class GeneticOptimizer:
                     if current_best_score > best_score:
                         best_score = current_best_score
                         best_params = self._individual_to_params(current_best)
-                        log.info("Поколение %s/%s: новый лучший результат %s = %.4f", 
-                                gen + 1, self.n_generations, optimization_metric, best_score)
+                        no_improvement_count = 0  # Сбрасываем счетчик при улучшении
+                        log.info("Поколение %s/%s: новый лучший результат %s = %.4f (мутация=%.3f, crossover=%.3f)", 
+                                gen + 1, self.n_generations, optimization_metric, best_score,
+                                current_mutation_prob, current_crossover_prob)
+                    else:
+                        no_improvement_count += 1
+                        if gen % 5 == 0:  # Логируем каждые 5 поколений
+                            log.info("Поколение %s/%s: лучший результат %s = %.4f (без улучшения %s поколений)", 
+                                    gen + 1, self.n_generations, optimization_metric, best_score, no_improvement_count)
+                    
+                    # Раннее прекращение если нет улучшения N поколений подряд
+                    if self.early_stopping_patience and no_improvement_count >= self.early_stopping_patience:
+                        log.info("Раннее прекращение: лучший результат не улучшался %s поколений подряд. Завершаем оптимизацию.", 
+                                self.early_stopping_patience)
+                        break
                     
                     # Сохраняем результаты текущего поколения
                     for ind in population:
@@ -436,7 +487,8 @@ class GeneticOptimizer:
                         child2 = creator.Individual(list(parent2))
                         child1.fitness = creator.FitnessMax()
                         child2.fitness = creator.FitnessMax()
-                        if random.random() < self.crossover_prob:
+                        # Скрещивание с адаптивной вероятностью
+                        if random.random() < current_crossover_prob:
                             child1, child2 = self.toolbox.mate(child1, child2)
                             del child1.fitness.values
                             del child2.fitness.values
@@ -445,15 +497,30 @@ class GeneticOptimizer:
                         if len(offspring) < self.population_size - self.elite_size:
                             offspring.append(child2)
                     
-                    # Мутация
+                    # Мутация с адаптивной вероятностью
                     for mutant in offspring:
-                        if random.random() < self.mutation_prob:
+                        if random.random() < current_mutation_prob:
                             self.toolbox.mutate(mutant)
                             del mutant.fitness.values
                     
                     # Оценка новых особей (параллельно)
                     invalid_ind = [ind for ind in offspring if not ind.fitness.valid]
                     if invalid_ind:
+                        # Обновляем функцию evaluate для использования правильных дат
+                        if use_fast:
+                            # Перерегистрируем evaluate с быстрыми датами для этого поколения
+                            self.toolbox.register(
+                                "evaluate",
+                                _evaluate_wrapper_for_deap,
+                                strategy_factory_name=strategy_factory_name,
+                                runner_config=runner_config,
+                                instrument=instrument,
+                                period=period,
+                                optimization_metric=optimization_metric,
+                                start_date_str=eval_start_date_str,
+                                end_date_str=end_date_str,
+                                cache_dir_str=cache_dir_str,
+                            )
                         fitnesses = list(self.toolbox.map(self.toolbox.evaluate, invalid_ind))
                         for ind, fit in zip(invalid_ind, fitnesses):
                             ind.fitness.values = fit
@@ -561,6 +628,9 @@ class GeneticOptimizer:
         if final_best_score > best_score:
             best_score = final_best_score
             best_params = final_best_params
+        
+        # Очищаем in-memory кэш после завершения оптимизации
+        self._memory_cache.clear()
         
         log.info("Генетическая оптимизация завершена. Лучший результат: %s = %.4f", optimization_metric, best_score)
         log.info("Лучшие параметры: %s", best_params)
