@@ -34,30 +34,52 @@ echo ""
 echo "📋 Шаг 1: Копирование данных..."
 echo ""
 
-# Проверяем существование исходной папки
-if [ ! -d "$SOURCE_DIR" ]; then
-    echo "❌ Исходная папка не найдена: $SOURCE_DIR"
+# Проверяем - может данные уже в проекте?
+if [ -d "$PROJECT_DIR/data/v1/curated/ctrader" ] && [ "$(find "$PROJECT_DIR/data/v1/curated/ctrader" -name "*.parquet" 2>/dev/null | wc -l | tr -d ' ')" -gt 0 ]; then
+    echo "✅ Данные уже есть в проекте!"
+    PARQUET_COUNT=$(find "$PROJECT_DIR/data/v1/curated/ctrader" -name "*.parquet" 2>/dev/null | wc -l | tr -d ' ')
+    echo "   Найдено $PARQUET_COUNT parquet файлов"
+    TARGET_DIR="$PROJECT_DIR/data/v1/curated/ctrader"
+elif [ -d "$SOURCE_DIR" ] && [ "$SOURCE_DIR" != "$TARGET_DIR" ]; then
+    # Проверяем существование исходной папки
+    if [ ! -d "$SOURCE_DIR" ]; then
+        echo "❌ Исходная папка не найдена: $SOURCE_DIR"
+        echo ""
+        echo "💡 Проверьте путь к данным или скопируйте вручную:"
+        echo "   mkdir -p $TARGET_DIR"
+        echo "   cp <путь_к_данным>/*.parquet $TARGET_DIR/"
+        exit 1
+    fi
+
+    # Создаем целевую директорию
+    mkdir -p "$TARGET_DIR"
+
+    # Копируем данные
+    echo "🔄 Копирование файлов из $SOURCE_DIR..."
+    if cp "$SOURCE_DIR"/*.parquet "$TARGET_DIR/" 2>/dev/null; then
+        echo "✅ Данные скопированы"
+    else
+        echo "⚠️  Ошибка при копировании. Пробуем с подробным выводом..."
+        cp -v "$SOURCE_DIR"/*.parquet "$TARGET_DIR/" || {
+            echo "❌ Не удалось скопировать. Проверьте права доступа."
+            exit 1
+        }
+    fi
+
+    # Проверяем что файлы скопированы
+    PARQUET_COUNT=$(find "$TARGET_DIR" -name "*.parquet" 2>/dev/null | wc -l | tr -d ' ')
+    if [ "$PARQUET_COUNT" -eq 0 ]; then
+        echo "❌ Файлы не скопированы"
+        exit 1
+    fi
+else
+    echo "⚠️  Не могу определить источник данных"
+    echo "   SOURCE: $SOURCE_DIR"
+    echo "   TARGET: $TARGET_DIR"
     echo ""
-    echo "💡 Проверьте путь к данным или скопируйте вручную:"
+    echo "💡 Скопируйте данные вручную:"
     echo "   mkdir -p $TARGET_DIR"
     echo "   cp <путь_к_данным>/*.parquet $TARGET_DIR/"
-    exit 1
-fi
-
-# Создаем целевую директорию
-mkdir -p "$TARGET_DIR"
-
-# Копируем данные
-echo "🔄 Копирование файлов из $SOURCE_DIR..."
-cp "$SOURCE_DIR"/*.parquet "$TARGET_DIR/" 2>/dev/null || {
-    echo "⚠️  Ошибка при копировании. Проверьте права доступа."
-    exit 1
-}
-
-# Проверяем что файлы скопированы
-PARQUET_COUNT=$(find "$TARGET_DIR" -name "*.parquet" 2>/dev/null | wc -l | tr -d ' ')
-if [ "$PARQUET_COUNT" -eq 0 ]; then
-    echo "❌ Файлы не скопированы"
     exit 1
 fi
 
