@@ -1,0 +1,9 @@
+{
+  "optimization_metric": "sharpe_ratio",
+  "best_score": -3.629982622143384,
+  "best_params": {
+    "atr_multiplier": 1.8,
+    "min_adx": 20.0
+  },
+  "optimized_at": "2025-11-08T11:45:18.527825"
+}

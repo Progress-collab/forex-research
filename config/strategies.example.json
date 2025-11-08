@@ -1,0 +1,33 @@
+[
+  {
+    "strategy_id": "momentum_breakout",
+    "max_notional": 200000,
+    "max_leverage": 2.0,
+    "max_orders_per_minute": 20
+  },
+  {
+    "strategy_id": "mean_reversion",
+    "max_notional": 150000,
+    "max_leverage": 1.8,
+    "max_orders_per_minute": 25
+  },
+  {
+    "strategy_id": "carry_momentum",
+    "max_notional": 120000,
+    "max_leverage": 2.5,
+    "max_orders_per_minute": 10
+  },
+  {
+    "strategy_id": "intraday_liquidity_breakout",
+    "max_notional": 150000,
+    "max_leverage": 2.0,
+    "max_orders_per_minute": 15
+  },
+  {
+    "strategy_id": "volatility_compression",
+    "max_notional": 120000,
+    "max_leverage": 1.8,
+    "max_orders_per_minute": 15
+  }
+]
+

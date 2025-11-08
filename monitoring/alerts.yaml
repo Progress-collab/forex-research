@@ -1,0 +1,23 @@
+alerts:
+  - name: "OrderLatencySpike"
+    metric: execution_latency_ms
+    condition: "p99 > 5000"
+    channels: ["slack:#trading-alerts", "telegram:@riskdesk"]
+    runbook: "docs/runbooks/order_latency.md"
+  - name: "BrokerRejectRate"
+    metric: broker_reject_rate
+    condition: "avg > 0.03 for 15m"
+    channels: ["slack:#trading-alerts"]
+    runbook: "docs/runbooks/broker_rejects.md"
+  - name: "PnLDivergence"
+    metric: pnl_live_vs_paper_sigma
+    condition: "abs > 2"
+    channels: ["slack:#quant-research"]
+    runbook: "docs/runbooks/pnl_divergence.md"
+  - name: "StrategyRecoveryDrop"
+    metric: strategy_recovery_factor
+    condition: "last < 1.0"
+    labels: ["strategy_id"]
+    channels: ["slack:#trading-alerts"]
+    runbook: "docs/runbooks/strategy_health.md"
+

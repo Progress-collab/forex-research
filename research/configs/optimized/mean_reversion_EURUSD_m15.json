@@ -1,0 +1,10 @@
+{
+  "optimization_metric": "sharpe_ratio",
+  "best_score": -25.090483591025553,
+  "best_params": {
+    "rsi_buy": 20.0,
+    "rsi_sell": 70.0,
+    "atr_multiplier": 1.5
+  },
+  "optimized_at": "2025-11-08T11:41:17.670424"
+}

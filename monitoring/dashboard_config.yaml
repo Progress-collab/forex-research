@@ -1,0 +1,57 @@
+dashboards:
+  execution_latency:
+    title: "Execution Latency"
+    panels:
+      - metric: execution_latency_ms
+        aggregation: p95
+        thresholds:
+          warning: 2500
+          critical: 5000
+  fill_rate:
+    title: "Order Fill Rate"
+    panels:
+      - metric: order_fill_ratio
+        aggregation: avg
+        thresholds:
+          warning: 0.9
+          critical: 0.8
+  pnl_live:
+    title: "Live PnL vs Paper"
+    panels:
+      - metric: pnl_live
+        aggregation: sum
+      - metric: pnl_paper
+        aggregation: sum
+  risk_limits:
+    title: "Risk Limits"
+    panels:
+      - metric: portfolio_leverage
+        thresholds:
+          warning: 3.5
+          critical: 4.0
+      - metric: portfolio_var_daily
+        thresholds:
+          warning: 0.022
+          critical: 0.025
+  strategy_health:
+    title: "Strategy Health"
+    panels:
+      - metric: strategy_sharpe
+        labels: ["strategy_id"]
+        aggregation: last
+        thresholds:
+          warning: 0.9
+          critical: 0.7
+      - metric: strategy_recovery_factor
+        labels: ["strategy_id"]
+        aggregation: last
+        thresholds:
+          warning: 1.2
+          critical: 1.0
+      - metric: strategy_drawdown
+        labels: ["strategy_id"]
+        aggregation: last
+        thresholds:
+          warning: -0.05
+          critical: -0.08
+
