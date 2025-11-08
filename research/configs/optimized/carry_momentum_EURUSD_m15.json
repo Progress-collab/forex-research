@@ -1,9 +1,12 @@
 {
-  "optimization_metric": "sharpe_ratio",
-  "best_score": -3.629982622143384,
+  "optimization_metric": "recovery_factor",
+  "best_score": 1000.0,
   "best_params": {
-    "atr_multiplier": 1.8,
-    "min_adx": 20.0
+    "atr_multiplier": 2.0,
+    "min_adx": 16,
+    "min_pos_di_advantage": 1.0,
+    "trend_confirmation_bars": 2,
+    "risk_reward_ratio": 1.5
   },
-  "optimized_at": "2025-11-08T11:45:18.527825"
+  "optimized_at": "2025-11-08T18:10:44.104156"
 }

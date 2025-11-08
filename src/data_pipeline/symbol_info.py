@@ -108,8 +108,12 @@ class SymbolInfoCache:
         with self._cache_path.open("w", encoding="utf-8") as fp:
             json.dump(data, fp, ensure_ascii=False, indent=2)
 
-    def load(self) -> None:
-        """Загружает кэш из JSON."""
+    def load(self, verbose: bool = False) -> None:
+        """Загружает кэш из JSON.
+        
+        Args:
+            verbose: Если True, выводит лог о загрузке. По умолчанию False для уменьшения шума в логах при параллельной обработке.
+        """
         if not self._cache_path.exists():
             return
         with self._cache_path.open("r", encoding="utf-8") as fp:
@@ -134,5 +138,6 @@ class SymbolInfoCache:
                     quote_currency=raw.get("quote_currency", "USD"),
                     updated_at=datetime.fromisoformat(data.get("updated_at", datetime.now(timezone.utc).isoformat())),
                 )
-        log.info("Loaded symbol info cache: %s symbols", len(self._symbols))
+        if verbose:
+            log.info("Loaded symbol info cache: %s symbols", len(self._symbols))
 

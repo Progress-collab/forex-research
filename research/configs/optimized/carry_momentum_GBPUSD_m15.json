@@ -1,0 +1,12 @@
+{
+  "optimization_metric": "recovery_factor",
+  "best_score": 1.9387317837759357,
+  "best_params": {
+    "atr_multiplier": 2.792640715681143,
+    "min_adx": 14,
+    "min_pos_di_advantage": 0.9822983637455628,
+    "trend_confirmation_bars": 5,
+    "risk_reward_ratio": 3.379420444283188
+  },
+  "optimized_at": "2025-11-08T18:51:59.497146"
+}

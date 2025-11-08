@@ -1,0 +1,735 @@
+{
+  "optimization_metric": "profit_factor",
+  "best_score": 0.17204574169342624,
+  "best_params": {
+    "atr_multiplier": 2.2,
+    "adx_threshold": 22,
+    "lookback_hours": 20,
+    "confirmation_bars": 1,
+    "min_pos_di_advantage": 2.0
+  },
+  "total_combinations": 72,
+  "optimized_at": "2025-11-08T16:51:34.027890",
+  "all_results": [
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.12058133038715745
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.1234117908227665
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.06376003469013063
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.06376003469013063
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.12058133038715745
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.1234117908227665
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.06376003469013063
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.06376003469013063
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.12114236150222757
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.12411820502800842
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.06637077708008295
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.06637077708008295
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.12114236150222757
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.12411820502800842
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.06637077708008295
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.06637077708008295
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.1241535871422657
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.12728111962456023
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.06637077708008295
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.06637077708008295
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.1241535871422657
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.12728111962456023
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.06637077708008295
+    },
+    {
+      "params": {
+        "atr_multiplier": 1.8,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.06637077708008295
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.1476669387029189
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15117967840069008
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.14618913358801633
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.14618913358801633
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.1476669387029189
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15117967840069008
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.14618913358801633
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.14618913358801633
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.14822154041270563
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.1519116437772068
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.15260768735247698
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15260768735247698
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.14822154041270563
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.1519116437772068
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.15260768735247698
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15260768735247698
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.15191659565656707
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15579538280705832
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.15260768735247698
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15260768735247698
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.15191659565656707
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15579538280705832
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.15260768735247698
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.0,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15260768735247698
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.1636852222079083
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.16639184985818087
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.1472513418369145
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 18,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.1472513418369145
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.1636852222079083
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.16639184985818087
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.1472513418369145
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 18,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.1472513418369145
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.16496339091344767
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.16781621813017786
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.15365196014757013
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 20,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15365196014757013
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.16496339091344767
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.16781621813017786
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.15365196014757013
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 20,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15365196014757013
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.1690485851135265
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.17204574169342624
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.15365196014757013
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 22,
+        "lookback_hours": 20,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15365196014757013
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.1690485851135265
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 1,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.17204574169342624
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 1.0
+      },
+      "score": 0.15365196014757013
+    },
+    {
+      "params": {
+        "atr_multiplier": 2.2,
+        "adx_threshold": 22,
+        "lookback_hours": 24,
+        "confirmation_bars": 2,
+        "min_pos_di_advantage": 2.0
+      },
+      "score": 0.15365196014757013
+    }
+  ]
+}

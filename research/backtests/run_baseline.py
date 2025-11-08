@@ -1,7 +1,11 @@
 from __future__ import annotations
 
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
+
 import json
-import json
+import logging
 import os
 from dataclasses import dataclass
 from datetime import datetime
@@ -18,6 +22,9 @@ from src.strategies import (
     Signal,
     Strategy,
 )
+
+logging.basicConfig(level=logging.INFO, format="%(asctime)s %(levelname)s %(message)s")
+log = logging.getLogger(__name__)
 
 RAW_ROOT = Path("data/v1/raw")
 CURATED_ROOT = Path("data/v1/curated/ctrader")
@@ -256,7 +263,7 @@ def render_report(summary: pd.DataFrame, trades_df: pd.DataFrame, metrics: dict[
         lines.append(_to_markdown(top[display_cols]))
 
     report_path.write_text("\n".join(lines), encoding="utf-8")
-    print(f"Отчёт сохранён: {report_path}")
+    log.info("Отчёт сохранён: %s", report_path)
 
 
 def _to_markdown(df: pd.DataFrame) -> str:
@@ -340,7 +347,7 @@ if __name__ == "__main__":
         render_report(summary, trades, metrics)
         export_metrics(metrics, summary)
         log_metrics_mlflow(metrics, summary)
-        print(summary)
+        log.info("Результаты бэктеста:\n%s", summary)
     else:
-        print("Не удалось сгенерировать сделки — проверьте исходные данные.")
+        log.warning("Не удалось сгенерировать сделки — проверьте исходные данные.")
 

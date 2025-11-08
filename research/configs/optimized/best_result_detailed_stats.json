@@ -1,0 +1,31 @@
+{
+  "params": {
+    "atr_multiplier": 1.5,
+    "min_adx": 16,
+    "min_pos_di_advantage": 1.0,
+    "trend_confirmation_bars": 3,
+    "risk_reward_ratio": 3.0
+  },
+  "stats": {
+    "strategy_id": "carry_momentum",
+    "instrument": "EURUSD",
+    "period": "m15",
+    "start_date": "2024-11-08T12:00:00+00:00",
+    "end_date": "2025-11-07T21:45:00+00:00",
+    "total_trades": 12,
+    "winning_trades": 10,
+    "losing_trades": 2,
+    "win_rate": 0.8333333333333334,
+    "total_pnl": 394.8139038991829,
+    "total_commission": 24.0,
+    "total_swap": 0.0,
+    "net_pnl": 370.8139038991829,
+    "sharpe_ratio": 13.719273192992528,
+    "max_drawdown": -0.0003498719941693447,
+    "recovery_factor": 10.598559189613272,
+    "profit_factor": 6.5056820541826825,
+    "average_win": 43.81650331961379,
+    "average_loss": -33.67556464847752,
+    "average_win_loss_ratio": 1.3011364108365364
+  }
+}

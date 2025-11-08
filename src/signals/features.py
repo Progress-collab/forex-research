@@ -153,7 +153,10 @@ class FeatureCalculator:
             "support_level": nearest_support,
             "resistance_distance_pct": resistance_distance_pct,
             "support_distance_pct": support_distance_pct,
+            # Волатильность (ATR относительно цены в процентах)
+            "volatility_pct": float((atr.iloc[-1] / data["close"].iloc[-1]) * 100) if data["close"].iloc[-1] > 0 else 0.0,
         }
+        
         return FeatureSet(values=values)
 
 

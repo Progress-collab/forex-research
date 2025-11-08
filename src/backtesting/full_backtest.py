@@ -1,7 +1,7 @@
 from __future__ import annotations
 
 import logging
-from dataclasses import dataclass
+from dataclasses import dataclass, field
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
 from typing import Dict, List, Optional
@@ -13,6 +13,16 @@ from src.data_pipeline.symbol_info import SymbolInfoCache
 from src.strategies import Signal, Strategy
 
 log = logging.getLogger(__name__)
+
+
+@dataclass(slots=True)
+class StopTakeHistoryEntry:
+    """Запись истории изменения стоп-лосса или тейк-профита."""
+    timestamp: datetime
+    stop_loss: float
+    take_profit: float
+    notional: float  # Размер позиции на этот момент
+    reason: Optional[str] = None  # Причина изменения (trailing_stop, partial_close, etc.)
 
 
 @dataclass(slots=True)
@@ -33,6 +43,8 @@ class Trade:
     commission: float
     swap: float
     net_pnl: float
+    stop_take_history: List[StopTakeHistoryEntry] = field(default_factory=list)
+    exit_reason: Optional[str] = None
 
 
 @dataclass(slots=True)
@@ -72,13 +84,25 @@ class FullBacktestRunner:
         initial_capital: float = 100_000.0,
         commission_bps: float = 0.5,
         slippage_bps: float = 1.5,
+        verbose_cache_load: bool = False,
     ):
         self.curated_dir = curated_dir
         self.symbol_cache = SymbolInfoCache(cache_path=symbol_info_path)
-        self.symbol_cache.load()
+        self.symbol_cache.load(verbose=verbose_cache_load)
         self.initial_capital = initial_capital
         self.commission_bps = commission_bps
         self.slippage_bps = slippage_bps
+
+    def _load_data(self, instrument: str, period: str = "m15") -> pd.DataFrame:
+        """Загружает данные для инструмента."""
+        data_path = self.curated_dir / f"{instrument}_{period}.parquet"
+        if not data_path.exists():
+            raise FileNotFoundError(f"Данные не найдены: {data_path}")
+        
+        df = pd.read_parquet(data_path)
+        df["utc_time"] = pd.to_datetime(df["utc_time"])
+        df = df.set_index("utc_time").sort_index()
+        return df
 
     def run(
         self,
@@ -184,6 +208,17 @@ class FullBacktestRunner:
         remaining_notional = initial_notional
         partial_closed = False
         trailing_stop_activated = False
+        
+        # История изменений стоп-лоссов и тейк-профитов
+        stop_take_history: List[StopTakeHistoryEntry] = []
+        # Добавляем начальное состояние
+        stop_take_history.append(StopTakeHistoryEntry(
+            timestamp=entry_time,
+            stop_loss=initial_stop_loss,
+            take_profit=take_profit,
+            notional=initial_notional,
+            reason="entry"
+        ))
 
         # Ищем точку выхода (стоп или тейк)
         exit_time = None
@@ -208,6 +243,14 @@ class FullBacktestRunner:
                         partial_closed = True
                         # Перемещаем стоп в безубыток после частичного закрытия
                         current_stop_loss = entry_price
+                        # Сохраняем изменение в историю
+                        stop_take_history.append(StopTakeHistoryEntry(
+                            timestamp=idx,
+                            stop_loss=current_stop_loss,
+                            take_profit=take_profit,
+                            notional=remaining_notional,
+                            reason="partial_close"
+                        ))
                 
                 # Trailing stop: перемещаем стоп при движении в прибыль
                 if use_trailing_stop:
@@ -220,6 +263,14 @@ class FullBacktestRunner:
                             new_stop = entry_price + trailing_stop_distance
                             if new_stop > current_stop_loss:
                                 current_stop_loss = new_stop
+                                # Сохраняем изменение в историю
+                                stop_take_history.append(StopTakeHistoryEntry(
+                                    timestamp=idx,
+                                    stop_loss=current_stop_loss,
+                                    take_profit=take_profit,
+                                    notional=remaining_notional,
+                                    reason="trailing_stop"
+                                ))
                 
                 # Проверяем стоп-лосс (включая trailing stop)
                 if low <= current_stop_loss:
@@ -246,6 +297,14 @@ class FullBacktestRunner:
                         partial_closed = True
                         # Перемещаем стоп в безубыток после частичного закрытия
                         current_stop_loss = entry_price
+                        # Сохраняем изменение в историю
+                        stop_take_history.append(StopTakeHistoryEntry(
+                            timestamp=idx,
+                            stop_loss=current_stop_loss,
+                            take_profit=take_profit,
+                            notional=remaining_notional,
+                            reason="partial_close"
+                        ))
                 
                 # Trailing stop: перемещаем стоп при движении в прибыль
                 if use_trailing_stop:
@@ -258,6 +317,14 @@ class FullBacktestRunner:
                             new_stop = entry_price - trailing_stop_distance
                             if new_stop < current_stop_loss:
                                 current_stop_loss = new_stop
+                                # Сохраняем изменение в историю
+                                stop_take_history.append(StopTakeHistoryEntry(
+                                    timestamp=idx,
+                                    stop_loss=current_stop_loss,
+                                    take_profit=take_profit,
+                                    notional=remaining_notional,
+                                    reason="trailing_stop"
+                                ))
                 
                 # Проверяем стоп-лосс (включая trailing stop)
                 if high >= current_stop_loss:
@@ -277,6 +344,15 @@ class FullBacktestRunner:
             exit_time = search_data.index[-1]
             exit_price = search_data.iloc[-1]["close"]
             exit_reason = "timeout"
+        
+        # Добавляем финальное состояние в историю
+        stop_take_history.append(StopTakeHistoryEntry(
+            timestamp=exit_time,
+            stop_loss=current_stop_loss,
+            take_profit=take_profit,
+            notional=remaining_notional,
+            reason=exit_reason or "exit"
+        ))
 
         # Рассчитываем PnL с учетом частичного закрытия
         if direction == "LONG":
@@ -284,14 +360,26 @@ class FullBacktestRunner:
         else:
             pnl = (entry_price - exit_price) / entry_price
 
-        # Учитываем slippage
+        # Учитываем slippage и spread
         slippage_pct = self.slippage_bps / 10000
+        
+        # Получаем спред из symbol_info
+        symbol_info = self.symbol_cache.get(signal.instrument)
+        spread_pips = symbol_info.spread if symbol_info else 0.0
+        # Переводим пипсы в проценты (для большинства валютных пар pip_location = -4, значит 1 пипс = 0.0001)
+        pip_location = symbol_info.pip_location if symbol_info else -4
+        spread_multiplier = 10 ** pip_location
+        spread_pct = (spread_pips * spread_multiplier) / entry_price if entry_price > 0 else 0.0
+        
+        # Применяем slippage и spread
         if direction == "LONG":
-            entry_price_adj = entry_price * (1 + slippage_pct)
-            exit_price_adj = exit_price * (1 - slippage_pct)
+            # LONG: вход по ask (close + spread/2), выход по bid (close - spread/2)
+            entry_price_adj = entry_price * (1 + slippage_pct + spread_pct / 2)
+            exit_price_adj = exit_price * (1 - slippage_pct - spread_pct / 2)
         else:
-            entry_price_adj = entry_price * (1 - slippage_pct)
-            exit_price_adj = exit_price * (1 + slippage_pct)
+            # SHORT: вход по bid (close - spread/2), выход по ask (close + spread/2)
+            entry_price_adj = entry_price * (1 - slippage_pct - spread_pct / 2)
+            exit_price_adj = exit_price * (1 + slippage_pct + spread_pct / 2)
 
         pnl_adj = (exit_price_adj - entry_price_adj) / entry_price_adj if direction == "LONG" else (entry_price_adj - exit_price_adj) / entry_price_adj
 
@@ -306,7 +394,7 @@ class FullBacktestRunner:
         commission = entry_commission + partial_commission + exit_commission
 
         # Своп (упрощенно - считаем дни удержания)
-        symbol_info = self.symbol_cache.get(signal.instrument)
+        # symbol_info уже получен выше для спреда
         swap_per_day = 0.0
         if symbol_info:
             swap_per_day = symbol_info.swap_long if direction == "LONG" else symbol_info.swap_short
@@ -350,6 +438,8 @@ class FullBacktestRunner:
             commission=commission,
             swap=swap_total,
             net_pnl=net_pnl,
+            stop_take_history=stop_take_history,
+            exit_reason=exit_reason,
         )
 
     def _build_result(

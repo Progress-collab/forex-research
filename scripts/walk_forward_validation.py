@@ -31,7 +31,7 @@ def run_walk_forward_validation(
     if strategy_name == "momentum_breakout":
         optimized_params_path = Path(f"research/configs/optimized/momentum_breakout_{instrument}_{period}.json")
         if optimized_params_path.exists():
-            with optimized_params_path.open("r") as fp:
+            with optimized_params_path.open("r", encoding="utf-8") as fp:
                 params = json.load(fp)
             best_params = params.get("best_params", {})
             
@@ -49,7 +49,7 @@ def run_walk_forward_validation(
         # Используем оптимизированные параметры
         optimized_params_path = Path("research/configs/optimized/mean_reversion_EURUSD_m15.json")
         if optimized_params_path.exists():
-            with optimized_params_path.open("r") as fp:
+            with optimized_params_path.open("r", encoding="utf-8") as fp:
                 params = json.load(fp)
             best_params = params.get("best_params", {})
             
@@ -65,7 +65,7 @@ def run_walk_forward_validation(
     elif strategy_name == "carry_momentum":
         optimized_params_path = Path("research/configs/optimized/carry_momentum_EURUSD_m15.json")
         if optimized_params_path.exists():
-            with optimized_params_path.open("r") as fp:
+            with optimized_params_path.open("r", encoding="utf-8") as fp:
                 params = json.load(fp)
             best_params = params.get("best_params", {})
             

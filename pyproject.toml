@@ -18,6 +18,7 @@ dependencies = [
     "python-dotenv>=1.0.1",
     "ctrader-open-api==0.9.2",
     "service-identity>=23.1.0",
+    "deap>=1.4.1",
 ]
 
 [project.optional-dependencies]

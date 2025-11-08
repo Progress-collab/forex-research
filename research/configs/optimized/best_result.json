@@ -1,0 +1,12 @@
+{
+  "instrument": "EURUSD_m15",
+  "best_score": 10.598559189613272,
+  "best_params": {
+    "atr_multiplier": 1.5,
+    "min_adx": 16,
+    "min_pos_di_advantage": 1.0,
+    "trend_confirmation_bars": 3,
+    "risk_reward_ratio": 3.0
+  },
+  "source_file": "research\\configs\\optimized\\carry_momentum_EURUSD_m15_all_results.json"
+}

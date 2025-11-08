@@ -15,16 +15,18 @@ from .utils import RiskSettings, adjust_confidence, compute_position_size
 @dataclass(slots=True)
 class CarryMomentumStrategy(Strategy):
     strategy_id: str = "carry_momentum"
-    atr_multiplier: float = 2.0  # Увеличено с 1.5 для большего расстояния стоп-лосса
-    min_adx: float = 20.0  # Увеличено с 18.0 для более сильных трендов
+    atr_multiplier: float = 2.2  # Увеличено с 1.8 для большего расстояния стоп-лосса (все убыточные сделки закрылись по стопу)
+    min_adx: float = 14.0  # Ослаблено с 18.0 для увеличения количества сделок
     min_atr: float = 0.0004
     swap_bias_threshold: float = 0.0
-    risk_reward_ratio: float = 2.0  # Соотношение risk/reward (минимум 1:2)
-    min_pos_di_advantage: float = 2.0  # Минимальное преимущество +DI над -DI для LONG (и наоборот)
-    trend_confirmation_bars: int = 3  # Количество баров подтверждения тренда
-    max_volatility_pct: float = 5.0  # Максимальная волатильность в процентах (ATR/price)
-    min_volatility_pct: float = 0.1  # Минимальная волатильность в процентах
-    avoid_hours: List[int] = field(default_factory=lambda: [22, 23, 0, 1, 2, 3, 4, 5])  # Часы для избегания
+    risk_reward_ratio: float = 2.5  # Улучшенное соотношение risk/reward
+    min_pos_di_advantage: float = 1.0  # Оптимизировано
+    trend_confirmation_bars: int = 2  # Ослаблено с 4 до 2 для увеличения количества сделок
+    max_volatility_pct: float = 0.15  # Максимальная волатильность в процентах (ATR/price)
+    min_volatility_pct: float = 0.08  # Минимальная волатильность в процентах
+    min_rsi_long: float = 50.0  # Минимальный RSI для LONG сделок
+    max_rsi_short: float = 50.0  # Максимальный RSI для SHORT сделок
+    enable_short_trades: bool = False  # Отключаем SHORT сделки, так как они плохо работают
     risk: RiskSettings = field(
         default_factory=lambda: RiskSettings(risk_per_trade_pct=0.008, max_notional=180_000.0, min_notional=20_000.0)
     )
@@ -58,6 +60,7 @@ class CarryMomentumStrategy(Strategy):
         atr = features.get("atr", default=0.0)
         pos_di = features.get("pos_di", default=0.0)
         neg_di = features.get("neg_di", default=0.0)
+        rsi = features.get("rsi", default=50.0)
         price = float(df["close"].iloc[-1])
         instrument = df.iloc[-1]["instrument"]
         ts_time = df.index[-1].time() if isinstance(df.index, pd.DatetimeIndex) else time(12, 0)
@@ -70,14 +73,10 @@ class CarryMomentumStrategy(Strategy):
         if not self._within_session(instrument, ts_time):
             return signals
         
-        # Фильтр по времени дня
-        if isinstance(df.index, pd.DatetimeIndex):
-            current_hour = df.index[-1].hour
-            if current_hour in self.avoid_hours:
-                return signals
+        # Фильтр по времени дня удален - стратегия торгует в любые часы
         
-        # Фильтр по волатильности
-        volatility_pct = (atr / price) * 100 if price > 0 else 0.0
+        # Фильтр по волатильности (используем volatility_pct из features)
+        volatility_pct = features.get("volatility_pct", default=0.0)
         if volatility_pct > self.max_volatility_pct or volatility_pct < self.min_volatility_pct:
             return signals
         
@@ -101,9 +100,10 @@ class CarryMomentumStrategy(Strategy):
         if (ema_short > ema_long and 
             swap_bias >= self.swap_bias_threshold and
             pos_di > neg_di + self.min_pos_di_advantage and
-            long_confirmation):
+            long_confirmation and
+            rsi >= self.min_rsi_long):  # Добавлен фильтр по RSI
             stop = price - stop_distance
-            take = price + stop_distance * self.risk_reward_ratio  # Risk/Reward 1:2
+            take = price + stop_distance * self.risk_reward_ratio  # Risk/Reward 1:2.5
             signals.append(
                 Signal(
                     strategy_id=self.strategy_id,
@@ -116,13 +116,15 @@ class CarryMomentumStrategy(Strategy):
                     confidence=confidence,
                 )
             )
-        # SHORT: EMA короткая < длинная, -DI > +DI, подтверждение тренда
-        elif (ema_short < ema_long and 
+        # SHORT: EMA короткая < длинная, -DI > +DI, подтверждение тренда (только если включены)
+        elif (self.enable_short_trades and
+              ema_short < ema_long and 
               swap_bias <= -self.swap_bias_threshold and
               neg_di > pos_di + self.min_pos_di_advantage and
-              short_confirmation):
+              short_confirmation and
+              rsi <= self.max_rsi_short):  # Добавлен фильтр по RSI
             stop = price + stop_distance
-            take = price - stop_distance * self.risk_reward_ratio  # Risk/Reward 1:2
+            take = price - stop_distance * self.risk_reward_ratio  # Risk/Reward 1:2.5
             signals.append(
                 Signal(
                     strategy_id=self.strategy_id,

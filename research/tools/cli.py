@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
+
 import json
 from dataclasses import asdict
 from pathlib import Path

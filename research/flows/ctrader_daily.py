@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
+
 import os
 from datetime import datetime, timedelta, timezone
 from pathlib import Path
@@ -8,7 +12,7 @@ from typing import Iterable
 from dotenv import load_dotenv
 from prefect import flow, task
 
-from src.data_pipeline.ctrader_backfill import build_raw_path, fetch_range, iso_to_datetime
+from src.data_pipeline.ctrader_backfill import build_raw_path, fetch_range
 from src.data_pipeline.ctrader_client import CTraderCredentials, CTraderTrendbarFetcher
 from src.data_pipeline.curation import append_parquet, save_jsonl, validate_continuity
 

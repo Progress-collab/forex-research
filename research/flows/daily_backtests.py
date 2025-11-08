@@ -1,5 +1,9 @@
 from __future__ import annotations
 
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
+
 from datetime import timedelta
 from typing import Iterable, Sequence
 

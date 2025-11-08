@@ -16,14 +16,21 @@ from .utils import RiskSettings, adjust_confidence, compute_position_size
 class MomentumBreakoutStrategy(Strategy):
     strategy_id: str = "momentum_breakout"
     lookback_hours: int = 24
-    atr_multiplier: float = 2.0  # Увеличено с 1.8 для большего расстояния стоп-лосса
+    atr_multiplier: float = 2.8  # Баланс между защитой и возможностью входа
     min_atr: float = 0.0003
-    adx_threshold: float = 20.0  # Увеличено с 18.0 для более сильных трендов
-    risk_reward_ratio: float = 2.0  # Соотношение risk/reward (минимум 1:2)
-    confirmation_bars: int = 2  # Количество баров подтверждения пробития
-    min_pos_di_advantage: float = 2.0  # Минимальное преимущество +DI над -DI для LONG (и наоборот)
-    avoid_hours: List[int] = field(default_factory=lambda: [22, 23, 0, 1, 2, 3, 4, 5])  # Часы для избегания (низкая ликвидность)
-    use_support_resistance: bool = True  # Использовать уровни поддержки/сопротивления вместо простых max/min
+    adx_threshold: float = 26.0  # Баланс между силой тренда и количеством сигналов
+    risk_reward_ratio: float = 2.5  # Улучшенное соотношение риск/прибыль
+    confirmation_bars: int = 3  # Баланс между подтверждением и количеством сигналов
+    min_pos_di_advantage: float = 3.5  # Баланс между силой направления и количеством сигналов
+    avoid_hours: List[int] = field(default_factory=lambda: [13, 15, 16, 17, 21, 22, 23, 0, 1, 2, 3, 4, 5])  # Только худшие часы
+    use_support_resistance: bool = True
+    min_rsi_long: float = 56.0  # Баланс между качеством и количеством сигналов
+    max_rsi_short: float = 44.0  # Для SHORT сделок (если включены)
+    max_volatility_pct: float = 0.13  # Баланс между избежанием высокой волатильности и возможностью входа
+    avoid_down_trend_long: bool = True
+    min_trend_strength: float = 0.0015  # Баланс между силой тренда и количеством сигналов
+    enable_short_trades: bool = False  # Отключаем SHORT сделки, так как они не работают
+    min_breakout_strength: float = 0.0003  # Минимальная сила пробития (более мягкий фильтр)
     risk: RiskSettings = field(
         default_factory=lambda: RiskSettings(risk_per_trade_pct=0.0075, max_notional=200_000.0, min_notional=20_000.0)
     )
@@ -73,6 +80,10 @@ class MomentumBreakoutStrategy(Strategy):
         adx = features.get("adx", default=0.0)
         pos_di = features.get("pos_di", default=0.0)
         neg_di = features.get("neg_di", default=0.0)
+        rsi = features.get("rsi", default=50.0)
+        ema_short = features.get("ema_short", default=0.0)
+        ema_long = features.get("ema_long", default=0.0)
+        volatility_pct = features.get("volatility_pct", default=0.0)
         signals: List[Signal] = []
 
         # Проверяем базовые фильтры
@@ -80,6 +91,20 @@ class MomentumBreakoutStrategy(Strategy):
             return signals
         if pd.isna(adx) or adx < self.adx_threshold:
             return signals
+        
+        # Фильтр по волатильности (избегаем высокой волатильности)
+        if volatility_pct > self.max_volatility_pct:
+            return signals
+        
+        # Фильтр по силе тренда
+        if len(df) >= 50:
+            price_change = (df["close"].iloc[-1] - df["close"].iloc[-50]) / df["close"].iloc[-50]
+            trend_strength = abs(price_change)
+            if trend_strength < self.min_trend_strength:
+                return signals
+        
+        # Определяем направление тренда
+        trend_direction = "UP" if ema_short > ema_long else "DOWN" if ema_short < ema_long else "FLAT"
 
         # Фильтр по времени дня
         if isinstance(df.index, pd.DatetimeIndex):
@@ -114,6 +139,11 @@ class MomentumBreakoutStrategy(Strategy):
             
             # Пробитие вверх: проверяем подтверждение несколькими барами
             if bar["high"] > high_break and not breakout_long:
+                # Проверяем силу пробития (цена должна пробить уровень на определенный процент)
+                breakout_strength = (bar["high"] - high_break) / high_break
+                if breakout_strength < self.min_breakout_strength:
+                    continue
+                
                 # Проверяем подтверждение: последние N баров должны закрыться выше уровня
                 confirmation_count = 0
                 for j in range(min(self.confirmation_bars, check_window - i)):
@@ -126,11 +156,22 @@ class MomentumBreakoutStrategy(Strategy):
                 if confirmation_count >= self.confirmation_bars:
                     # Проверяем направление ADX (+DI > -DI для LONG)
                     if pos_di > neg_di + self.min_pos_di_advantage:
-                        breakout_long = True
-                        entry_price = float(df.iloc[idx]["close"])  # Входим на цене закрытия последнего подтверждающего бара
+                        # Фильтр по RSI для LONG (прибыльные сделки имеют RSI > 58)
+                        if rsi >= self.min_rsi_long:
+                            # Избегаем LONG в нисходящем тренде
+                            if not (self.avoid_down_trend_long and trend_direction == "DOWN"):
+                                # Дополнительная проверка: цена должна быть выше EMA short (подтверждение тренда)
+                                if bar["close"] > ema_short:
+                                    breakout_long = True
+                                    entry_price = float(df.iloc[idx]["close"])  # Входим на цене закрытия последнего подтверждающего бара
             
-            # Пробитие вниз: проверяем подтверждение несколькими барами
-            if bar["low"] < low_break and not breakout_short:
+            # Пробитие вниз: проверяем подтверждение несколькими барами (только если включены SHORT сделки)
+            if self.enable_short_trades and bar["low"] < low_break and not breakout_short:
+                # Проверяем силу пробития
+                breakout_strength = (low_break - bar["low"]) / low_break
+                if breakout_strength < self.min_breakout_strength:
+                    continue
+                
                 # Проверяем подтверждение: последние N баров должны закрыться ниже уровня
                 confirmation_count = 0
                 for j in range(min(self.confirmation_bars, check_window - i)):
@@ -143,28 +184,41 @@ class MomentumBreakoutStrategy(Strategy):
                 if confirmation_count >= self.confirmation_bars:
                     # Проверяем направление ADX (-DI > +DI для SHORT)
                     if neg_di > pos_di + self.min_pos_di_advantage:
-                        breakout_short = True
-                        entry_price_short = float(df.iloc[idx]["close"])  # Входим на цене закрытия последнего подтверждающего бара
+                        # Фильтр по RSI для SHORT (очень строгий)
+                        if rsi <= self.max_rsi_short:
+                            # Дополнительная проверка: SHORT только в очень сильном нисходящем тренде
+                            if trend_direction == "DOWN" and adx > self.adx_threshold + 10:
+                                # Цена должна быть ниже EMA short
+                                if bar["close"] < ema_short:
+                                    breakout_short = True
+                                    entry_price_short = float(df.iloc[idx]["close"])  # Входим на цене закрытия последнего подтверждающего бара
 
         # Генерируем сигналы на основе пробитий
-        # Улучшенное соотношение risk/reward: минимум 1:2
+        # Улучшенное соотношение risk/reward: минимум 1:2.5
         if breakout_long and atr > 0:
             stop_distance = self.atr_multiplier * atr
             stop = entry_price - stop_distance
-            take = entry_price + stop_distance * self.risk_reward_ratio  # Risk/Reward 1:2
-            notional = compute_position_size(last_row["instrument"], stop_distance, self.risk)
-            signals.append(
-                Signal(
-                    strategy_id=self.strategy_id,
-                    instrument=last_row["instrument"],
-                    direction="LONG",
-                    entry_price=float(entry_price),
-                    stop_loss=float(stop),
-                    take_profit=float(take),
-                    notional=notional,
-                    confidence=adjust_confidence(adx, self.adx_threshold),
+            
+            # Улучшенный расчет тейк-профита: используем более консервативный подход
+            # Берем расстояние до следующего уровня сопротивления или используем risk/reward
+            take = entry_price + stop_distance * self.risk_reward_ratio
+            
+            # Дополнительная проверка: стоп-лосс не должен быть слишком близко к текущей цене
+            # и не должен быть ниже важного уровня поддержки
+            if stop < entry_price * 0.998:  # Минимум 0.2% от цены входа
+                notional = compute_position_size(last_row["instrument"], stop_distance, self.risk)
+                signals.append(
+                    Signal(
+                        strategy_id=self.strategy_id,
+                        instrument=last_row["instrument"],
+                        direction="LONG",
+                        entry_price=float(entry_price),
+                        stop_loss=float(stop),
+                        take_profit=float(take),
+                        notional=notional,
+                        confidence=adjust_confidence(adx, self.adx_threshold),
+                    )
                 )
-            )
 
         if breakout_short and atr > 0:
             stop_distance = self.atr_multiplier * atr
