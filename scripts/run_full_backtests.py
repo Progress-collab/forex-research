@@ -21,6 +21,9 @@ from src.strategies import (
     PairsTradingStrategy,
     Strategy,
     VolatilityCompressionBreakoutStrategy,
+    CombinedMomentumStrategy,
+    MACDTrendStrategy,
+    BollingerReversionStrategy,
 )
 
 
@@ -137,6 +140,9 @@ def main() -> None:
         CarryMomentumStrategy(),
         IntradayLiquidityBreakoutStrategy(),
         VolatilityCompressionBreakoutStrategy(),
+        CombinedMomentumStrategy(),
+        MACDTrendStrategy(),
+        BollingerReversionStrategy(),
         # PairsTradingStrategy(),  # Требует специальной подготовки данных
         # NewsMomentumStrategy(),  # Требует данных новостей
     ]
