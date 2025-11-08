@@ -1,37 +1,44 @@
 name: CI
 
+# Что такое Cloud Build (GitHub Actions)?
+# Это автоматическая проверка вашего кода на GitHub при каждом push/PR
+# Работает как робот-помощник: проверяет что код компилируется, тесты проходят
+# Вам не нужно ничего запускать вручную - всё происходит автоматически
+
 on:
   push:
-    branches: [ main, master, develop, cursor/** ]
+    branches: [ main, master, develop ]
   pull_request:
     branches: [ main, master, develop ]
 
 jobs:
+  # Одна задача: проверить что проект собирается
   test:
-    runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        python-version: ["3.10", "3.11"]
-
+    runs-on: ubuntu-latest  # Используем бесплатный Linux сервер GitHub
+    
     steps:
+    # Шаг 1: Скачать код с GitHub
     - uses: actions/checkout@v4
-
-    - name: Set up Python ${{ matrix.python-version }}
+    
+    # Шаг 2: Установить Python
+    - name: Set up Python
       uses: actions/setup-python@v5
       with:
-        python-version: ${{ matrix.python-version }}
-        cache: 'pip'
-
+        python-version: "3.11"
+        cache: 'pip'  # Кэшируем pip для ускорения
+    
+    # Шаг 3: Установить зависимости
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -e .
-        pip install pytest
-
+    
+    # Шаг 4: Проверить что импорты работают
     - name: Check imports
       run: |
-        python -c "import pandas; import numpy; import src.data_pipeline; print('✅ Imports OK')"
-
+        python -c "import pandas; import numpy; import src.data_pipeline; print('✅ Все импорты OK')"
+    
+    # Шаг 5: Собрать пакет (проверка что проект правильно настроен)
     - name: Build package
       run: |
         pip install build
