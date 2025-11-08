@@ -52,13 +52,15 @@ mlflow.db
 mlruns/
 mlartifacts/
 
-# Data files (обычно не коммитят данные)
-data/
-*.parquet
+# Data files - через Git LFS
+# data/  # Раскомментировать если НЕ используем Git LFS
+# *.parquet  # Через Git LFS, не игнорируем
 *.jsonl
 *.csv
 *.h5
 *.hdf5
+# Но разрешаем данные через Git LFS
+!data/v1/curated/ctrader/*.parquet
 
 # Secrets
 secrets/*.json
