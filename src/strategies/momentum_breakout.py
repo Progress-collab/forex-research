@@ -15,10 +15,10 @@ from .utils import RiskSettings, adjust_confidence, compute_position_size
 @dataclass(slots=True)
 class MomentumBreakoutStrategy(Strategy):
     strategy_id: str = "momentum_breakout"
-    lookback_hours: int = 24
+    lookback_hours: int = 16  # Уменьшено с 24 до 16 для более реалистичных breakouts
     atr_multiplier: float = 1.8
-    min_atr: float = 0.0003
-    adx_threshold: float = 18.0
+    min_atr: float = 0.0001  # Ослаблено с 0.0003 для большего количества сигналов
+    adx_threshold: float = 15.0  # Снижено с 18.0 для более мягкого фильтра
     risk: RiskSettings = field(
         default_factory=lambda: RiskSettings(risk_per_trade_pct=0.0075, max_notional=200_000.0, min_notional=20_000.0)
     )
@@ -41,9 +41,17 @@ class MomentumBreakoutStrategy(Strategy):
         # Разделяем данные на два периода:
         # 1. Предыдущий период (для определения максимума/минимума)
         # 2. Текущий период (для проверки пробития)
-        check_window = 20  # Проверяем последние 20 баров на пробития
-        prev_period = df.iloc[-lookback_bars-check_window:-check_window]  # Предыдущий период
-        current_period = df.iloc[-check_window:]  # Окно для проверки пробития
+        # Используем меньший check_window для проверки свежих пробитий
+        check_window = 5  # Проверяем последние 5 баров на свежие пробития
+        required_bars = lookback_bars + check_window
+        
+        if len(df) < required_bars:
+            return []
+        
+        # Предыдущий период для определения уровней breakouts
+        prev_period = df.iloc[-required_bars:-check_window]
+        # Текущий период для проверки пробитий (последние check_window баров)
+        current_period = df.iloc[-check_window:]
         
         if len(prev_period) < lookback_bars or len(current_period) < 1:
             return []
@@ -74,26 +82,28 @@ class MomentumBreakoutStrategy(Strategy):
             return signals
 
         # Проверяем пробития в текущем периоде
-        # Ищем случаи, когда текущая или предыдущие свечи пробили уровни
+        # Ищем свежие пробития на последних барах (от новых к старым)
         breakout_long = False
         breakout_short = False
         entry_price = 0.0
         entry_price_short = 0.0
         
-        # Проверяем последние бары на пробития (от новых к старым)
+        # Проверяем последние бары на пробития (от новых к старым, чтобы найти свежие пробития)
         for i in range(min(check_window, len(current_period))):
-            idx = -1 - i
-            bar = df.iloc[idx]
+            # Берем бар от последнего (i=0) к более старым (i увеличивается)
+            bar = current_period.iloc[-1 - i]
             
             # Пробитие вверх (high пробил максимум предыдущего периода)
             if bar["high"] > high_break and not breakout_long:
                 breakout_long = True
-                entry_price = high_break  # Входим на уровне пробития
+                # Используем high пробивающей свечи или уровень пробития, что выше
+                entry_price = max(bar["high"], high_break)
             
             # Пробитие вниз (low пробил минимум предыдущего периода)
             if bar["low"] < low_break and not breakout_short:
                 breakout_short = True
-                entry_price_short = low_break  # Входим на уровне пробития
+                # Используем low пробивающей свечи или уровень пробития, что ниже
+                entry_price_short = min(bar["low"], low_break)
 
         # Генерируем сигналы на основе пробитий
         if breakout_long and atr > 0:
