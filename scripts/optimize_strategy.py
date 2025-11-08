@@ -182,6 +182,7 @@ def optimize_carry_momentum_genetic(
         "min_pos_di_advantage": [0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0],
         "trend_confirmation_bars": [2, 3, 4, 5],
         "risk_reward_ratio": [1.5, 2.0, 2.5, 3.0, 3.5, 4.0],
+        "enable_short_trades": [True, False],  # Добавлено: оптимизация включения/выключения шортовых сделок
     }
     
     optimizer = GeneticOptimizer(runner)

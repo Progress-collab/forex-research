@@ -1,0 +1,8 @@
+{
+  "atr_multiplier": 2.7937308944835535,
+  "min_adx": 14,
+  "min_pos_di_advantage": 0.5180633113453625,
+  "trend_confirmation_bars": 5,
+  "risk_reward_ratio": 3.4554906961816316,
+  "enable_short_trades": false
+}
