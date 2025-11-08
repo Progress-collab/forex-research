@@ -7,6 +7,10 @@ from datetime import datetime, timezone
 from pathlib import Path
 from typing import List
 
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
+
 from dotenv import load_dotenv
 
 from src.data_pipeline.ctrader_backfill import build_raw_path, fetch_range, iso_to_datetime

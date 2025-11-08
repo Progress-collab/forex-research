@@ -8,6 +8,10 @@ from typing import Dict, List
 
 import pandas as pd
 
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
+
 from src.data_pipeline.gap_analysis import analyze_gaps, classify_gaps
 
 

@@ -2,9 +2,14 @@ from __future__ import annotations
 
 import json
 import logging
+import sys
 from datetime import datetime
 from pathlib import Path
 from typing import Dict, List
+
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
 
 from src.backtesting.full_backtest import FullBacktestRunner, FullBacktestResult
 from src.strategies import (

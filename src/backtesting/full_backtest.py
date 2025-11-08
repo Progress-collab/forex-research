@@ -157,9 +157,15 @@ class FullBacktestRunner:
         future_data: pd.DataFrame,
         entry_time: datetime,
         max_bars: int = 200,
+        use_trailing_stop: bool = True,
+        trailing_stop_pct: float = 0.5,  # Перемещать стоп при достижении 50% прибыли
+        use_partial_close: bool = True,
+        partial_close_pct: float = 0.5,  # Закрыть 50% позиции
+        partial_close_at_pct: float = 0.5,  # При достижении 50% тейк-профита
     ) -> Optional[Trade]:
         """
         Симулирует сделку на основе сигнала и будущих данных.
+        Поддерживает trailing stop и частичное закрытие позиций.
         """
         if future_data.empty:
             return None
@@ -168,9 +174,16 @@ class FullBacktestRunner:
         search_data = future_data.head(max_bars)
 
         entry_price = signal.entry_price
-        stop_loss = signal.stop_loss
+        initial_stop_loss = signal.stop_loss
         take_profit = signal.take_profit
         direction = signal.direction
+        initial_notional = signal.notional
+        
+        # Текущие значения для trailing stop и partial close
+        current_stop_loss = initial_stop_loss
+        remaining_notional = initial_notional
+        partial_closed = False
+        trailing_stop_activated = False
 
         # Ищем точку выхода (стоп или тейк)
         exit_time = None
@@ -183,11 +196,36 @@ class FullBacktestRunner:
             close = row["close"]
 
             if direction == "LONG":
-                # Проверяем стоп-лосс
-                if low <= stop_loss:
+                # Вычисляем текущую прибыль
+                current_profit_pct = (close - entry_price) / entry_price
+                profit_to_take_pct = (take_profit - entry_price) / entry_price
+                
+                # Частичное закрытие при достижении 50% тейк-профита
+                if use_partial_close and not partial_closed and profit_to_take_pct > 0:
+                    if current_profit_pct >= profit_to_take_pct * partial_close_at_pct:
+                        # Закрываем часть позиции
+                        remaining_notional = initial_notional * (1 - partial_close_pct)
+                        partial_closed = True
+                        # Перемещаем стоп в безубыток после частичного закрытия
+                        current_stop_loss = entry_price
+                
+                # Trailing stop: перемещаем стоп при движении в прибыль
+                if use_trailing_stop:
+                    if current_profit_pct > 0:
+                        # Активируем trailing stop при достижении определенного процента прибыли
+                        if current_profit_pct >= profit_to_take_pct * trailing_stop_pct:
+                            trailing_stop_activated = True
+                            # Перемещаем стоп на определенный процент от текущей прибыли
+                            trailing_stop_distance = (close - entry_price) * (1 - trailing_stop_pct)
+                            new_stop = entry_price + trailing_stop_distance
+                            if new_stop > current_stop_loss:
+                                current_stop_loss = new_stop
+                
+                # Проверяем стоп-лосс (включая trailing stop)
+                if low <= current_stop_loss:
                     exit_time = idx
-                    exit_price = stop_loss
-                    exit_reason = "stop_loss"
+                    exit_price = current_stop_loss
+                    exit_reason = "stop_loss" if not trailing_stop_activated else "trailing_stop"
                     break
                 # Проверяем тейк-профит
                 if high >= take_profit:
@@ -196,11 +234,36 @@ class FullBacktestRunner:
                     exit_reason = "take_profit"
                     break
             else:  # SHORT
-                # Проверяем стоп-лосс
-                if high >= stop_loss:
+                # Вычисляем текущую прибыль
+                current_profit_pct = (entry_price - close) / entry_price
+                profit_to_take_pct = (entry_price - take_profit) / entry_price
+                
+                # Частичное закрытие при достижении 50% тейк-профита
+                if use_partial_close and not partial_closed and profit_to_take_pct > 0:
+                    if current_profit_pct >= profit_to_take_pct * partial_close_at_pct:
+                        # Закрываем часть позиции
+                        remaining_notional = initial_notional * (1 - partial_close_pct)
+                        partial_closed = True
+                        # Перемещаем стоп в безубыток после частичного закрытия
+                        current_stop_loss = entry_price
+                
+                # Trailing stop: перемещаем стоп при движении в прибыль
+                if use_trailing_stop:
+                    if current_profit_pct > 0:
+                        # Активируем trailing stop при достижении определенного процента прибыли
+                        if current_profit_pct >= profit_to_take_pct * trailing_stop_pct:
+                            trailing_stop_activated = True
+                            # Перемещаем стоп на определенный процент от текущей прибыли
+                            trailing_stop_distance = (entry_price - close) * (1 - trailing_stop_pct)
+                            new_stop = entry_price - trailing_stop_distance
+                            if new_stop < current_stop_loss:
+                                current_stop_loss = new_stop
+                
+                # Проверяем стоп-лосс (включая trailing stop)
+                if high >= current_stop_loss:
                     exit_time = idx
-                    exit_price = stop_loss
-                    exit_reason = "stop_loss"
+                    exit_price = current_stop_loss
+                    exit_reason = "stop_loss" if not trailing_stop_activated else "trailing_stop"
                     break
                 # Проверяем тейк-профит
                 if low <= take_profit:
@@ -215,7 +278,7 @@ class FullBacktestRunner:
             exit_price = search_data.iloc[-1]["close"]
             exit_reason = "timeout"
 
-        # Рассчитываем PnL
+        # Рассчитываем PnL с учетом частичного закрытия
         if direction == "LONG":
             pnl = (exit_price - entry_price) / entry_price
         else:
@@ -232,9 +295,15 @@ class FullBacktestRunner:
 
         pnl_adj = (exit_price_adj - entry_price_adj) / entry_price_adj if direction == "LONG" else (entry_price_adj - exit_price_adj) / entry_price_adj
 
-        # Комиссия
+        # Комиссия (на весь notional, включая частично закрытую позицию)
         commission_pct = self.commission_bps / 10000
-        commission = signal.notional * commission_pct * 2  # Вход и выход
+        # Комиссия за вход
+        entry_commission = initial_notional * commission_pct
+        # Комиссия за частичное закрытие (если было)
+        partial_commission = (initial_notional - remaining_notional) * commission_pct if partial_closed else 0.0
+        # Комиссия за финальный выход
+        exit_commission = remaining_notional * commission_pct
+        commission = entry_commission + partial_commission + exit_commission
 
         # Своп (упрощенно - считаем дни удержания)
         symbol_info = self.symbol_cache.get(signal.instrument)
@@ -242,13 +311,28 @@ class FullBacktestRunner:
         if symbol_info:
             swap_per_day = symbol_info.swap_long if direction == "LONG" else symbol_info.swap_short
             # Переводим в проценты от notional (упрощенно)
-            swap_per_day_pct = swap_per_day / signal.notional if signal.notional > 0 else 0.0
+            swap_per_day_pct = swap_per_day / initial_notional if initial_notional > 0 else 0.0
 
         days_held = (exit_time - entry_time).total_seconds() / 86400
-        swap_total = signal.notional * swap_per_day_pct * days_held
+        
+        # Своп начальной позиции до частичного закрытия
+        swap_before_partial = initial_notional * swap_per_day_pct * days_held if not partial_closed else 0.0
+        # Своп оставшейся позиции после частичного закрытия
+        swap_after_partial = remaining_notional * swap_per_day_pct * days_held if partial_closed else 0.0
+        swap_total = swap_before_partial + swap_after_partial
 
         # Итоговый PnL
-        pnl_amount = signal.notional * pnl_adj
+        # PnL от частично закрытой позиции (если было)
+        partial_pnl = 0.0
+        if partial_closed:
+            partial_close_price = take_profit * partial_close_at_pct + entry_price * (1 - partial_close_at_pct) if direction == "LONG" else entry_price * (1 + partial_close_at_pct) - take_profit * partial_close_at_pct
+            partial_pnl_pct = (partial_close_price - entry_price) / entry_price if direction == "LONG" else (entry_price - partial_close_price) / entry_price
+            partial_pnl = (initial_notional - remaining_notional) * partial_pnl_pct
+        
+        # PnL от оставшейся позиции
+        remaining_pnl = remaining_notional * pnl_adj
+        
+        pnl_amount = partial_pnl + remaining_pnl
         net_pnl = pnl_amount - commission - swap_total
 
         return Trade(
@@ -258,9 +342,9 @@ class FullBacktestRunner:
             direction=direction,
             entry_price=entry_price_adj,
             exit_price=exit_price_adj,
-            stop_loss=stop_loss,
+            stop_loss=current_stop_loss,  # Финальный стоп (может быть trailing)
             take_profit=take_profit,
-            notional=signal.notional,
+            notional=initial_notional,  # Исходный размер позиции
             pnl=pnl_amount,
             pnl_pct=pnl_adj,
             commission=commission,

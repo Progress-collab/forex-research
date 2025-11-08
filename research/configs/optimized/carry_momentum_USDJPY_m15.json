@@ -1,0 +1,9 @@
+{
+  "optimization_metric": "profit_factor",
+  "best_score": 0.9137688137345412,
+  "best_params": {
+    "atr_multiplier": 2.5,
+    "min_adx": 25
+  },
+  "optimized_at": "2025-11-08T15:09:00.088014"
+}

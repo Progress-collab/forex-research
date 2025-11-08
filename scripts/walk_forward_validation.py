@@ -2,12 +2,17 @@ from __future__ import annotations
 
 import json
 import logging
+import sys
 from pathlib import Path
 from typing import Callable, Dict
 
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
+
 from src.backtesting.full_backtest import FullBacktestRunner
 from src.backtesting.walk_forward import WalkForwardTester, WalkForwardResult
-from src.strategies import CarryMomentumStrategy, MeanReversionStrategy
+from src.strategies import CarryMomentumStrategy, MeanReversionStrategy, MomentumBreakoutStrategy
 
 
 def run_walk_forward_validation(
@@ -23,7 +28,24 @@ def run_walk_forward_validation(
     runner = FullBacktestRunner(curated_dir=curated_dir)
 
     # Создаем factory функцию для стратегии
-    if strategy_name == "mean_reversion":
+    if strategy_name == "momentum_breakout":
+        optimized_params_path = Path(f"research/configs/optimized/momentum_breakout_{instrument}_{period}.json")
+        if optimized_params_path.exists():
+            with optimized_params_path.open("r") as fp:
+                params = json.load(fp)
+            best_params = params.get("best_params", {})
+            
+            def strategy_factory() -> MomentumBreakoutStrategy:
+                return MomentumBreakoutStrategy(
+                    atr_multiplier=best_params.get("atr_multiplier", 2.0),
+                    adx_threshold=best_params.get("adx_threshold", 20.0),
+                    lookback_hours=best_params.get("lookback_hours", 24),
+                    risk_reward_ratio=best_params.get("risk_reward_ratio", 2.0),
+                )
+        else:
+            def strategy_factory() -> MomentumBreakoutStrategy:
+                return MomentumBreakoutStrategy()
+    elif strategy_name == "mean_reversion":
         # Используем оптимизированные параметры
         optimized_params_path = Path("research/configs/optimized/mean_reversion_EURUSD_m15.json")
         if optimized_params_path.exists():
@@ -49,8 +71,9 @@ def run_walk_forward_validation(
             
             def strategy_factory() -> CarryMomentumStrategy:
                 return CarryMomentumStrategy(
-                    atr_multiplier=best_params.get("atr_multiplier", 1.5),
-                    min_adx=best_params.get("min_adx", 18.0),
+                    atr_multiplier=best_params.get("atr_multiplier", 2.0),
+                    min_adx=best_params.get("min_adx", 20.0),
+                    risk_reward_ratio=best_params.get("risk_reward_ratio", 2.0),
                 )
         else:
             def strategy_factory() -> CarryMomentumStrategy:
@@ -118,7 +141,7 @@ def main() -> None:
     parser.add_argument(
         "--strategy",
         required=True,
-        choices=["mean_reversion", "carry_momentum"],
+        choices=["mean_reversion", "carry_momentum", "momentum_breakout"],
         help="Стратегия для валидации.",
     )
     parser.add_argument(

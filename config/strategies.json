@@ -1,0 +1,28 @@
+[
+  {
+    "strategy_id": "momentum_breakout",
+    "max_notional": 200000,
+    "max_leverage": 2.0,
+    "max_orders_per_minute": 20,
+    "enabled": false,
+    "params": {
+      "atr_multiplier": 2.0,
+      "adx_threshold": 20.0,
+      "lookback_hours": 24,
+      "risk_reward_ratio": 2.0
+    }
+  },
+  {
+    "strategy_id": "carry_momentum",
+    "max_notional": 120000,
+    "max_leverage": 2.5,
+    "max_orders_per_minute": 10,
+    "enabled": false,
+    "params": {
+      "atr_multiplier": 2.0,
+      "min_adx": 20.0,
+      "risk_reward_ratio": 2.0
+    }
+  }
+]
+

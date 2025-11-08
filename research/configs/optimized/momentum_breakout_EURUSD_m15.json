@@ -1,0 +1,10 @@
+{
+  "optimization_metric": "profit_factor",
+  "best_score": 0.45196054261336815,
+  "best_params": {
+    "atr_multiplier": 2.0,
+    "adx_threshold": 25,
+    "lookback_hours": 20
+  },
+  "optimized_at": "2025-11-08T15:08:24.925498"
+}

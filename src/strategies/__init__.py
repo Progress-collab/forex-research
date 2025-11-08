@@ -10,6 +10,9 @@ from .intraday_liquidity_breakout import IntradayLiquidityBreakoutStrategy
 from .volatility_compression import VolatilityCompressionBreakoutStrategy
 from .pairs_trading import PairsTradingStrategy
 from .news_momentum import NewsMomentumStrategy
+from .combined_momentum import CombinedMomentumStrategy
+from .macd_trend import MACDTrendStrategy
+from .bollinger_reversion import BollingerReversionStrategy
 
 __all__ = [
     "Signal",
@@ -21,5 +24,8 @@ __all__ = [
     "VolatilityCompressionBreakoutStrategy",
     "PairsTradingStrategy",
     "NewsMomentumStrategy",
+    "CombinedMomentumStrategy",
+    "MACDTrendStrategy",
+    "BollingerReversionStrategy",
 ]
 

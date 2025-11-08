@@ -2,7 +2,12 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from datetime import datetime
+
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
 
 from src.data_pipeline import DataPipelineConfig, ingest_instrument_history, list_fx_instruments
 

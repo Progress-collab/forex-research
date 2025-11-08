@@ -37,7 +37,7 @@ class HyperparameterOptimizer:
         param_grid: Dict[str, List],
         instrument: str,
         period: str = "m15",
-        optimization_metric: str = "sharpe_ratio",  # sharpe_ratio, recovery_factor, net_pnl
+        optimization_metric: str = "sharpe_ratio",  # sharpe_ratio, recovery_factor, net_pnl, profit_factor
         start_date: Optional[datetime] = None,
         end_date: Optional[datetime] = None,
     ) -> OptimizationResult:
@@ -79,6 +79,10 @@ class HyperparameterOptimizer:
                     score = result.recovery_factor if result.recovery_factor != float("inf") else 1000.0
                 elif optimization_metric == "net_pnl":
                     score = result.net_pnl
+                elif optimization_metric == "profit_factor":
+                    # Profit Factor = Gross Profit / Gross Loss
+                    # Если нет убытков, возвращаем большое значение
+                    score = result.profit_factor if result.profit_factor > 0 else 0.0
                 else:
                     raise ValueError(f"Неизвестная метрика: {optimization_metric}")
 

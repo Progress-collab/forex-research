@@ -7,6 +7,10 @@ from typing import Dict, List
 
 import pandas as pd
 
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
+
 
 def analyze_backtest_results(report_path: Path) -> Dict:
     """

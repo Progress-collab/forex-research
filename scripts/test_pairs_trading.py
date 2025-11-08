@@ -2,10 +2,15 @@ from __future__ import annotations
 
 import json
 import logging
+import sys
 from pathlib import Path
 from typing import Dict, List
 
 import pandas as pd
+
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
 
 from src.data_pipeline.pairs_utils import (
     compute_spread,

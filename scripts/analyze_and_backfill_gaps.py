@@ -7,6 +7,11 @@ from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
+
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
+
 from dotenv import load_dotenv
 
 from src.data_pipeline.ctrader_backfill import fetch_range, iso_to_datetime

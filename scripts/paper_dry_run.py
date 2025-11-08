@@ -2,10 +2,15 @@ from __future__ import annotations
 
 import argparse
 import json
+import sys
 from pathlib import Path
 from typing import Iterable
 
 from dataclasses import asdict
+
+# Настройка UTF-8 кодировки для Windows консоли
+from src.utils.encoding import setup_utf8_encoding
+setup_utf8_encoding()
 
 from src.execution.engine import EngineConfig, ExecutionEngine
 from src.execution.models import ExecutionReport, Order, OrderSide, OrderType, StrategyConfig
