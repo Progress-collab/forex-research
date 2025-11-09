@@ -13,6 +13,9 @@ from .news_momentum import NewsMomentumStrategy
 from .combined_momentum import CombinedMomentumStrategy
 from .macd_trend import MACDTrendStrategy
 from .bollinger_reversion import BollingerReversionStrategy
+from .pattern_reversal import PatternReversalStrategy
+from .pattern_breakout import PatternBreakoutStrategy
+from .pattern_head_shoulders import PatternHeadShouldersStrategy
 
 __all__ = [
     "Signal",
@@ -27,5 +30,8 @@ __all__ = [
     "CombinedMomentumStrategy",
     "MACDTrendStrategy",
     "BollingerReversionStrategy",
+    "PatternReversalStrategy",
+    "PatternBreakoutStrategy",
+    "PatternHeadShouldersStrategy",
 ]
 
